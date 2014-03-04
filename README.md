@@ -8,11 +8,13 @@ It is a collection of scripts to make everyday life a tiny bit easier.
 git clone https://github.com/bigbinary/tiny_scripts.git
 cd tiny_scripts
 pwd 
+```
 
 open ~/.bashrc file by executing subl ~/.bashrc . Add following line at
 the very bottom. Replace `/Users/nsingh/code/bigbinary_llc/tiny_scripts`
 with the output you got when you executed pwd.
 
+```
 export PATH="/Users/nsingh/code/bigbinary_llc/tiny_scripts:$PATH"
 ```
 
