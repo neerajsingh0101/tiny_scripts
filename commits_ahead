@@ -11,7 +11,8 @@ require_relative 'common.rb'
 #
 
 compare_string = "master...#{branch_name}"
-msg = "This lists all commits present in this branch but not in master. In other words it lists all the commits this branch is ahead of master."
+msg = "This lists all commits present in this branch but not in master."
+msg << " In other words it lists all the commits this branch is ahead of master."
 
 puts ''
 puts msg

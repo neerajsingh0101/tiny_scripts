@@ -11,7 +11,8 @@ require_relative 'common.rb'
 #
 
 compare_string = "#{branch_name}...master"
-msg = "This lists all commits present in master but not in this branch. Mostly the result should be empty. If it is not empty then you should bring those changes from master to this branch"
+msg = "This lists all commits present in master but not in this branch." 
+msg << " Mostly the result should be empty. If it is not empty then you should bring those changes from master to this branch."
 
 puts ''
 puts msg
