@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require_relative 'common.rb'
+
+# It will list all the commits that master has but this branch does not.
+# In other words it lists all the commits that this branch is behind of master.
+#
+# Usage:
+#
+# stand in the branch you want to compare against master and execute the command.
+#
+
+compare_string = "#{branch_name}...master"
+msg = "This lists all commits present in master but not in this branch. Mostly the result should be empty. If it is not empty then you should bring those changes from master to this branch"
+
+puts ''
+puts msg
+puts ''
+
+open_url "https://github.com/#{repo_owner}/#{repo_name}/compare/#{compare_string}"
+
