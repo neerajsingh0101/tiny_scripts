@@ -5,7 +5,7 @@ It is a collection of scripts to make everyday life a tiny bit easier.
 ### How to setup
 
 ```
-git clone xxxx
+git clone https://github.com/bigbinary/tiny_scripts.git
 cd tiny_scripts
 pwd 
 
