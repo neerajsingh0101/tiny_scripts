@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative 'common.rb'
+
+# It will list all the commits this will be pushed when this branch is deployed.
+#
+# Usage:
+#
+# stand in the production branch and execute the command.
+#
+
+puts "This lists all the commits that will be pushed when this branch is deployed"
+
+open_url "https://github.com/#{repo_owner}/#{repo_name}/compare/#{most_recent_production_tag}...production"
+

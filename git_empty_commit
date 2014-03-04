@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require_relative 'common.rb'
+
+# Sometimes I need empty commit to see if continuous integration is working or not. Or to test git hooks.
+#
+# Usage:
+#
+# Stand in the branch for which you want to send pull request and execute git_empty_commit .
+#
+
+execute_cmd %Q{git commit -m 'empty commit' --allow-empty}
+
