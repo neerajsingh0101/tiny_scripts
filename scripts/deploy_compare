@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'common.rb'
+require_relative '../common.rb'
 
 # It will list all the commits this will be pushed when this branch is deployed.
 #

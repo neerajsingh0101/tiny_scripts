@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'common.rb'
+require_relative '../common.rb'
 
 # Often a branch falls behind master and it needs to be brough uptodate
 # so that the branch has all the commits from master.

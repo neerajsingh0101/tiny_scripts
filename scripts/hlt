@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative '../common.rb'
+
+# Makes it easy to tail log for a heroku app.
+#
+# Usage:
+#
+# stand in the branch you want to tail the log from and execute hlt.
+
+
+heroku_app_name = repo_name + '-' + branch_name
+heroku_app_name_with_dashes = heroku_app_name.gsub('_','-') + '-ip'
+
+execute_cmd "heroku logs --tail --app #{heroku_app_name_with_dashes}"

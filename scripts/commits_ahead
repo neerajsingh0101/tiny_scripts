@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'common.rb'
+require_relative '../common.rb'
 
 # It will list all the commits that this branch has but master does not. 
 # In other words it lists all the commits that this branch is ahead of master.
