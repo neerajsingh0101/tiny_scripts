@@ -10,18 +10,18 @@ cd tiny_scripts
 pwd 
 ```
 
-open ~/.bashrc file by executing `subl ~/.bashrc` or `vim ~/.bashrc` . Add following line at
-the very bottom. Replace `/Users/nsingh/code/bigbinary_llc/tiny_scripts`
-with the output you got when you executed pwd.
+* open ~/.bashrc file by executing `subl ~/.bashrc` or `vim ~/.bashrc` . 
+* Add `/Users/nsingh/code/bigbinary_llc/tiny_scripts`. 
 
 ```
 export PATH="/Users/nsingh/code/bigbinary_llc/tiny_scripts/scripts:$PATH"
 ```
 
+* In the above statement replace `/Users/nsingh/code/bigbinary_llc` with the actual directory structure in your machine.
+
 ### How to use it
 
-AT the top of every script there is a small section about what that
-script does and how to use it.
+AT the top of every script there is a small section about what that script does and how to use it.
 
 
 Brought to you by [BigBinary](http://BigBinary.com)
