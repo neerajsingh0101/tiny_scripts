@@ -2,6 +2,8 @@
 
 require_relative '../common.rb'
 
+# hlt is short form of "heroku logs tails".
+#
 # Makes it easy to tail log for a heroku app.
 #
 # Usage:

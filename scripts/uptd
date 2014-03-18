@@ -2,6 +2,8 @@
 
 require_relative '../common.rb'
 
+# uptd is short form of "uptodate".
+#
 # Often a branch falls behind master and it needs to be brough uptodate
 # so that the branch has all the commits from master.
 #
