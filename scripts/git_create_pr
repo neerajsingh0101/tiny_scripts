@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require_relative '../common.rb'
+
+# It turns an existing issue into a pull request.
+#
+# Usage:
+#
+# Stand in the branch for which you want to send pull request and execute git_create_pr .
+#
+
+issue_number = branch_name.to_i
+
+ensure_hub_command_exists
+execute_cmd "hub pull-request -i #{issue_number} -b #{repo_owner}:master -h #{repo_owner}:#{branch_name}"
+
+open_url "https://github.com/#{repo_owner}/#{repo_name}/pull/#{issue_number}"

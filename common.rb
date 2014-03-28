@@ -47,12 +47,9 @@ end
 def ensure_hub_command_exists
   cmd = "hub --version"
 
-  Open3.popen2e(cmd) do |stdin, stdout_err, wait_thr|
-    exit_status = wait_thr.value
-    unless exit_status.success?
-      puts "hub command is not preset"
-      abort "Please execute gem install hub"
-    end
+  unless system(cmd)
+    puts "hub command is not preset"
+    abort "Please execute brew install hub"
   end
 end
 
