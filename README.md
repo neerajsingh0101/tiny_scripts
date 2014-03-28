@@ -6,7 +6,7 @@ It is a collection of scripts to make everyday life a tiny bit easier.
 
 ```
 git clone https://github.com/bigbinary/tiny_scripts.git
-cd tiny_scripts
+cd tiny_scripts/scripts
 pwd 
 ```
 
