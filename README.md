@@ -21,9 +21,13 @@ export PATH="paste-result-of-pwd-here:$PATH"
 
 * In the above statement replace `paste-result-of-pwd-here` with the output you got in step 1 when you executed `pwd`.
 
-### How to use various scripts
+#### How to convert an existing issue into a pull request
 
-AT the top of every script there is a small section about what that script does and how to use it.
+Stand in the branch which you want to be converted into a pull request and execute following line in terminal.
+
+```
+git_create_pr
+```
 
 
 
