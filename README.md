@@ -10,14 +10,16 @@ cd tiny_scripts
 pwd 
 ```
 
+Note down the result of `pwd`.
+
 * open ~/.bashrc file by executing `subl ~/.bashrc` or `vim ~/.bashrc` . 
-* Add `/Users/nsingh/code/bigbinary_llc/tiny_scripts`. 
+* Add following line at the very end of your `~/.bashrc` file.
 
 ```
-export PATH="/Users/nsingh/code/bigbinary_llc/tiny_scripts/scripts:$PATH"
+export PATH="paste-result-of-pwd-here:$PATH"
 ```
 
-* In the above statement replace `/Users/nsingh/code/bigbinary_llc` with the actual directory structure in your machine.
+* In the above statement replace `paste-result-of-pwd-here` with the output you got in step 1 when you executed `pwd`.
 
 ### How to use it
 
