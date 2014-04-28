@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require_relative '../common.rb'
+
+#
+# Writing a typical commit message is like this
+# git commit -m "added twitter authentication feature"
+#
+# with gitcm the above line can be written as
+# gitcm added twitter authentication feature
+# 
+# Gotchas: If your message is something like this
+# gitcm changed method name from twitterauth => twitter_authentication
+# then the actual message passed to git commit would be only "twitterauth"
+# becase of bash issue. If someone has a good fix for it then lemme know.
+#
+execute_cmd "git commit -m '#{ARGV.join(' ')}'"
+
