@@ -2,6 +2,7 @@ require 'rubygems'
 require 'open3'
 
 def execute_cmd cmd
+  puts cmd
   lines = []
 
   if Open3.respond_to?(:popen2e)
