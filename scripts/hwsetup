@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require_relative '../common.rb'
+
+# hw is short form of "heroku run rake jobs:work". Here "w" stands for worker.
+#
+# Usage:
+#
+# stand in the branch you want to run the job and execute hw.
+
+
+heroku_app_name = repo_name + '-' + branch_name
+
+if %w(production staging).include?(branch_name)
+  heroku_app_name_with_dashes = heroku_app_name.gsub('_','-')
+else
+  heroku_app_name_with_dashes = heroku_app_name.gsub('_','-') + '-ip'
+end
+
+execute_cmd "heroku run rake setup --app #{heroku_app_name_with_dashes}"
