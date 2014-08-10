@@ -21,24 +21,32 @@ require_relative '../common.rb'
 # stand in a branch and execute uptd
 #
 
-def update_master
-  execute_cmd 'git checkout master'
-  execute_cmd 'git pull'
+class DeployReady
+
+  def process
+    current_branch_name = Util.branch_name
+    update_current_branch
+    update_master
+    merge_master_to_current_branch(current_branch_name) unless current_branch_name == 'master'
+  end
+
+  private
+
+  def update_master
+    execute_cmd 'git checkout master'
+    execute_cmd 'git pull'
+  end
+
+  def merge_master_to_current_branch branch_name
+    execute_cmd "git checkout #{branch_name}"
+    execute_cmd 'git merge master'
+    execute_cmd 'git push'
+  end
+
+  def update_current_branch
+    execute_cmd 'git pull'
+  end
+
 end
 
-def merge_current_branch branch_name
-  execute_cmd "git checkout #{branch_name}"
-  execute_cmd 'git merge master'
-  execute_cmd 'git push'
-end
-
-def update_current_branch
-  execute_cmd 'git pull'
-end
-
-current_branch_name = branch_name
-
-update_current_branch
-update_master
-merge_current_branch(current_branch_name) unless current_branch_name == 'master'
-
+DeployReady.new.process

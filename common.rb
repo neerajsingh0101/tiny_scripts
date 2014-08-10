@@ -1,48 +1,15 @@
 require 'rubygems'
 require 'open3'
 
-def execute_cmd cmd
-  puts cmd
-  lines = []
-
-  if Open3.respond_to?(:popen2e)
-    Open3.popen2e(cmd) do |stdin, stdout_err, wait_thr|
-      while line = stdout_err.gets
-        puts line
-        lines << line
-      end
-
-      exit_status = wait_thr.value
-      unless exit_status.success?
-        abort "FAILED !!! #{cmd}"
-      end
-    end
-    lines
-  else
-    [`#{cmd}`]
-  end
-end
-
-def most_recent_production_tag
-  execute_cmd "git fetch --tags"
-  @_most_recent_production_tag ||= `git tag -l | grep production | sed 's/_/-/g' | sort -rg | head -n 1`.chomp
-end
-
-def repo_owner
-  @_repo_owner ||= begin
-    string = `git remote -v | grep fetch | grep origin`
-    regex = /.*:(.*)\/.*/
-    match_data = string.match(regex)
-    match_data.to_a.last
-  end
-end
+require_relative './shared/command_executor'
+require_relative './shared/util'
 
 def repo_name
-  @_repo_name ||= `git rev-parse --show-toplevel`.split('/').last.strip
+  Util.repo_name
 end
 
 def branch_name
-  @_branch_name ||= (`git symbolic-ref HEAD`).gsub(%r[refs/heads/],'').strip
+  Util.branch_name
 end
 
 def ensure_hub_command_exists
@@ -69,3 +36,15 @@ def open_url url
   Launchy.open url
 end
 
+def repo_owner
+  @_repo_owner ||= Util.repo_owner
+end
+
+def execute_cmd cmd
+  CommandExecutor.new(cmd).process
+end
+
+def most_recent_production_tag
+  execute_cmd "git fetch --tags"
+  @_most_recent_production_tag ||= `git tag -l | grep production | sed 's/_/-/g' | sort -rg | head -n 1`.chomp
+end
