@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../common.rb'
+require_relative '../shared/common.rb'
 
 # Sometimes I need empty commit to see if continuous integration is working or not. Or to test git hooks.
 #

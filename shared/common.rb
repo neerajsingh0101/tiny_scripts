@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'open3'
 
-require_relative './shared/command_executor'
-require_relative './shared/util'
+require_relative './command_executor'
+require_relative './util'
 
 def repo_name
   Util.repo_name

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../common.rb'
+require_relative '../shared/common.rb'
 
 #
 # Writing a typical commit message is like this

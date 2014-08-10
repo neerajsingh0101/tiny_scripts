@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../common.rb'
+require_relative '../shared/common.rb'
 
 # pushes the branch and sets tracking on.
 

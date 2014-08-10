@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../common.rb'
+require_relative '../shared/common.rb'
 
 # hlt is short form of "heroku logs tails".
 #
@@ -13,10 +13,6 @@ require_relative '../common.rb'
 
 heroku_app_name = repo_name + '-' + branch_name
 
-if %w(production staging).include?(branch_name)
-  heroku_app_name_with_dashes = heroku_app_name.gsub('_','-')
-else
-  heroku_app_name_with_dashes = heroku_app_name.gsub('_','-') + '-ip'
-end
+heroku_app_name_with_dashes = heroku_app_name.gsub('_','-')
 
 execute_cmd "heroku logs --tail --app #{heroku_app_name_with_dashes}"

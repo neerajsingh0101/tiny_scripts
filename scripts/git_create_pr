@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative '../common.rb'
+require_relative '../shared/common.rb'
 
 # It turns an existing issue into a pull request.
 #
