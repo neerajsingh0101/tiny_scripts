@@ -5,11 +5,11 @@ require_relative './command_executor'
 require_relative './util'
 
 def repo_name
-  Util.repo_name
+  Util.new.repo_name
 end
 
 def branch_name
-  Util.branch_name
+  Util.new.branch_name
 end
 
 def ensure_hub_command_exists
@@ -37,7 +37,7 @@ def open_url url
 end
 
 def repo_owner
-  @_repo_owner ||= Util.repo_owner
+  @_repo_owner ||= Util.new.repo_owner
 end
 
 def execute_cmd cmd

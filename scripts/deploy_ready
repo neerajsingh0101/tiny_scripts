@@ -24,7 +24,7 @@ require_relative '../shared/common.rb'
 class DeployReady
 
   def process
-    current_branch_name = Util.branch_name
+    current_branch_name = Util.new.branch_name
     update_current_branch
     update_master
     merge_master_to_current_branch(current_branch_name) unless current_branch_name == 'master'
