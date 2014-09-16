@@ -15,4 +15,5 @@ heroku_app_name = repo_name + '-' + branch_name
 
 heroku_app_name_with_dashes = heroku_app_name.gsub('_','-')
 
-execute_cmd "heroku logs --tail --app #{heroku_app_name_with_dashes}"
+cmd = "heroku logs --tail --app #{heroku_app_name_with_dashes}"
+execute_cmd cmd
