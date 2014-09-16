@@ -5,16 +5,15 @@ require_relative '../shared/common.rb'
 # pushes the branch and sets tracking on.
 
 # Usage :
-# 
+#
 #  stand in the branch you want to push to github and execute gp
 #
 
-
 # -u, --set-upstream`
 #
-#  For every branch that is up to date or successfully pushed, add 
+#  For every branch that is up to date or successfully pushed, add
 #  upstream (tracking) reference, used by argument-less git-pull(1) and
-#  other commands. For more information, see branch.<name>.merge in 
+#  other commands. For more information, see branch.<name>.merge in
 #  git-config(1).
 
 execute_cmd "git push -u origin #{branch_name}"
