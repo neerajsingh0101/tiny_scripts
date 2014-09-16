@@ -2,8 +2,6 @@
 
 require_relative '../common.rb'
 
-# uptd is short form of "uptodate".
-#
 # Often a branch falls behind master and it needs to be brough uptodate
 # so that the branch has all the commits from master.
 #
@@ -18,7 +16,7 @@ require_relative '../common.rb'
 #
 # Usage :
 #
-# stand in a branch and execute uptd
+# stand in a branch and execute git_rebase_master
 #
 
 def update_master
