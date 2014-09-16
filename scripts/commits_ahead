@@ -2,7 +2,7 @@
 
 require_relative '../shared/common.rb'
 
-# It will list all the commits that this branch has but master does not. 
+# It will list all the commits that this branch has but master does not.
 # In other words it lists all the commits that this branch is ahead of master.
 #
 # Usage:
