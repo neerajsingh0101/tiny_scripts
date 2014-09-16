@@ -9,9 +9,10 @@ require_relative '../shared/common.rb'
 # Stand in the branch for which you want to send pull request and execute git_create_pr .
 #
 
-issue_number = branch_name.to_i
+issue_number = branch_name
 
 ensure_hub_command_exists
-execute_cmd "hub pull-request -i #{issue_number} -b #{repo_owner}:master -h #{repo_owner}:#{branch_name}"
+cmd = "hub pull-request -i #{issue_number} -b #{repo_owner}:master -h #{repo_owner}:#{branch_name}"
+execute_cmd cmd
 
 open_url "https://github.com/#{repo_owner}/#{repo_name}/pull/#{issue_number}"
