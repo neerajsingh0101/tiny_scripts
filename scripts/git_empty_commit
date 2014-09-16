@@ -9,5 +9,5 @@ require_relative '../shared/common.rb'
 # Stand in the branch for which you want to send pull request and execute git_empty_commit .
 #
 
-execute_cmd %Q{git commit -m 'empty commit' --allow-empty}
-
+cmd =  %Q{git commit -m 'empty commit' --allow-empty}
+execute_cmd cmd
