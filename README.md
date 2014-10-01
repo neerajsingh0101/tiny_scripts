@@ -1,8 +1,8 @@
-## tiny_scripts
+#### tiny_scripts
 
 It is a collection of scripts to make everyday life a tiny bit easier.
 
-### How to setup
+#### How to setup
 
 ```
 git clone https://github.com/bigbinary/tiny_scripts.git
@@ -21,4 +21,6 @@ export PATH="paste-result-of-pwd-here:$PATH"
 
 * In the above statement replace `paste-result-of-pwd-here` with the output you got in step 1 when you executed `pwd`.
 
-Brought to you by [BigBinary](http://BigBinary.com)
+#### Brought to you by
+
+![BigBinary](http://bigbinary.com/assets/common/logo.png)
