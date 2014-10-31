@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require_relative '../shared/common.rb'
+
+# hc is short form of "heroku run console --app [app name]".
+#
+# Usage:
+#
+# stand in the branch you want to run console from execute hc.
+
+
+heroku_app_name = repo_name + '-' + branch_name
+
+heroku_app_name_with_dashes = heroku_app_name.gsub('_','-')
+
+cmd = "heroku run console --app #{heroku_app_name_with_dashes}"
+execute_cmd cmd
