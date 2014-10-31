@@ -7,12 +7,12 @@ It is a collection of scripts to make everyday life a tiny bit easier.
 ```
 git clone https://github.com/bigbinary/tiny_scripts.git
 cd tiny_scripts/scripts
-pwd 
+pwd
 ```
 
 Note down the result of `pwd`.
 
-* open ~/.bashrc file by executing `subl ~/.bashrc` or `vim ~/.bashrc` . 
+* open ~/.bashrc file by executing `subl ~/.bashrc` or `vim ~/.bashrc` .
 * Add following line at the very end of your `~/.bashrc` file.
 
 ```
