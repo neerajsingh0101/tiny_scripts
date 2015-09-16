@@ -12,30 +12,13 @@ require_relative '../shared/common.rb'
 # stand in a branch and execute mdeploy
 #
 
-def update_master
-  execute_cmd 'git checkout master'
-  execute_cmd 'git pull'
-end
-
-def uptodate_current_branch branch_name
-  execute_cmd "git checkout #{branch_name}"
-  execute_cmd 'git merge master'
-  execute_cmd 'git push'
-end
-
-def update_current_branch
-  execute_cmd 'git pull'
-end
 
 def deploy
   execute_cmd "bundle install"
   execute_cmd "bundle exec cap #{branch_name} deploy"
 end
 
-current_branch_name = branch_name
 
-update_current_branch
-update_master
-uptodate_current_branch(current_branch_name) unless current_branch_name == 'master'
+execute_cmd "uptd"
 deploy
 
